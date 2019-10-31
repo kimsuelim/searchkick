@@ -186,13 +186,13 @@ module Searchkick
         when "korean"
           settings[:analysis][:analyzer].merge!(
             default_analyzer => {
-              type: "openkoreantext-analyzer"
+              type: "nori"
             },
             searchkick_search: {
-              type: "openkoreantext-analyzer"
+              type: "nori"
             },
             searchkick_search2: {
-              type: "openkoreantext-analyzer"
+              type: "nori"
             }
           )
 

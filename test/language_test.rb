@@ -39,7 +39,7 @@ class LanguageTest < Minitest::Test
   end
 
   def test_korean
-    # requires https://github.com/open-korean-text/elasticsearch-analysis-openkoreantext
+    # requires https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-nori.html
     with_options(Song, language: "korean") do
       store_names ["한국어를 처리하는 예시입니닼ㅋㅋ"], Song
       assert_language_search "처리", ["한국어를 처리하는 예시입니닼ㅋㅋ"]
